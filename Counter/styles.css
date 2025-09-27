@@ -1,0 +1,38 @@
+body{
+    background-color:aliceblue;
+    text-align: center;
+}
+
+label{
+    display: block;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif  ;
+    
+}
+#number{
+    font-size: 5em;
+}
+
+.buttons{
+    margin: 10px;
+}
+
+.stepInput input{
+    width: 40px;
+}
+
+button{
+    background-color: rgb(95, 175, 255);
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-size: 1.3em;
+    transition: background-color 0.2s;
+}
+
+button:hover{
+    background-color: rgb(141, 197, 253);
+    cursor: pointer;
+}
+
+button:active{
+    background-color: rgb(167, 211, 255)
+}
