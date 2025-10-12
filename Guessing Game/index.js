@@ -22,7 +22,7 @@ submitButton.onclick = function userGuessing(){
 }
 
 resetButton.onclick = function resetGame(){
-    let randomNumber = Math.floor(Math.random() * 100) + 1;
+    randomNumber = Math.floor(Math.random() * 100) + 1;
     label.textContent = "Guess";
     document.body.style.backgroundColor = `hsl(0, 100%, 100%`;
     redness = 100;
