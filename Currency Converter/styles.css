@@ -1,0 +1,46 @@
+.game-container{
+    justify-content: center;
+    display: flex;
+    align-items: center; 
+    height: 100vh;
+}
+
+.game{
+    background-color: lightgreen;
+    border: 2px solid black;
+    text-align: center;
+}
+
+.game h2{
+    margin: 10px;
+}
+
+.game input{
+    margin: 10px;
+}
+
+.game #euro-to-lev{
+    margin-bottom: 0px;
+}
+
+.game input{
+    width: 50px;
+}
+
+.game button{
+    background-color: rgb(104, 210, 175);
+}
+
+.game button:hover{
+    background-color: rgb(127, 240, 203);
+}
+
+.game button:active{
+    background-color: rgb(104, 210, 175);
+}
+
+.game .output{
+    margin-bottom: 10px;
+    display: inline-block;
+    font-size: 2em;
+}
