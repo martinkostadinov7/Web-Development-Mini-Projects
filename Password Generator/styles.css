@@ -1,0 +1,45 @@
+.parent{
+    justify-content: center;
+    display: flex;
+    align-items: center; 
+    height: 100vh;
+}
+
+.container{
+    text-align: center;
+    border: 5px solid black;
+}
+.container h1{
+    margin: 10px;
+}
+
+.container label{
+    user-select: none;
+}
+
+.variables{
+    text-align: left;
+    display: inline-block;
+}
+
+#lengthInput{
+    width: 30px;
+}
+
+#generateButton{
+    margin-top: 20px;
+    width: 80px;
+    height: 35px;
+    border: 2px solid rgb(0, 128, 255);
+    background-color: black;
+    color: white;
+}
+
+#generateButton:hover{
+    background-color: rgb(54, 54, 54);
+    cursor: pointer;
+}
+
+#generateButton:active{
+    background-color: black;
+}
