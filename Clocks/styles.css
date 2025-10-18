@@ -1,0 +1,59 @@
+body{
+    margin: 0px;
+}
+
+.parent{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.box {
+    flex: 1;
+    width: 100%;
+    text-align: center;
+}
+
+.box a{
+    width: 100%;
+    height: 100%;
+}
+.box button{
+    width: 100%;
+    height: 100%;
+    font-size: 3em;
+    cursor: pointer;
+    border: none;
+}
+
+#clock{
+    background-color:rgb(255, 165, 225);
+}
+#stopwatch{
+    background-color:rgb(250, 255, 165);
+}
+#timer{
+    background-color:rgb(165, 255, 255);
+}
+
+#clock:hover{
+    background-color:rgb(255, 135, 215);
+}
+#stopwatch:hover{
+    background-color:rgb(228, 234, 105);
+}
+#timer:hover{
+    background-color:rgb(102, 232, 232);
+}
+
+#clock:active{
+    background-color:rgb(255, 165, 225);
+}
+#stopwatch:active{
+    background-color:rgb(250, 255, 165);
+}
+#timer:active{
+    background-color:rgb(165, 255, 255);
+}
