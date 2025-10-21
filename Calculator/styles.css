@@ -1,0 +1,76 @@
+body{
+    background-color: rgb(186, 186, 186);
+}
+.parent{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    font-family: monospace;
+}
+
+.box{
+    background-color: black;
+    padding: 15px;
+    border-radius: 50px;
+}
+
+.buttons {
+   display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 buttons per row */
+  gap: 8px; /* equal distance between buttons horizontally & vertically */
+  width: 100%; /* or 100% if you want it responsive */
+  margin: 0 auto; /* center container */
+  font-family: monospace;
+}
+
+.calculatons {
+  font-size: 5em;
+  color: white;
+  text-align: right;
+  margin: 10px;
+  height: 80px;
+  width: 360px;
+  background-color: rgb(30, 30, 30);
+  overflow: hidden;
+  white-space: nowrap;
+  direction: ltr;       /* normal typing direction */
+  display: flex;
+  justify-content: flex-end;  /* align text to the right */
+  align-items: center;
+}
+
+
+.buttons button{
+    font-family: inherit;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    font-size: 3em;
+    background-color: gray;
+    color: white;
+    border: none;
+}
+
+.buttons button:hover{
+    background-color: rgb(109, 109, 109);
+    cursor: pointer;
+}
+
+.buttons button:active{
+    background-color: gray;
+}
+
+.buttons .orange{
+    background-color: orange;
+}
+.buttons .orange:hover{
+    background-color: rgb(214, 139, 0);
+    cursor: pointer;
+}
+.buttons .orange:active{
+    background-color: orange;
+}
+
+
+
