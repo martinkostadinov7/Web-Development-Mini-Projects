@@ -5,39 +5,56 @@ let currentIndex = 0;
 let milliseconds = 0;
 let intervalId;
 let timeStarted = false;
-let running = false;
+let gameEnded = false;
+let corectWords = 0;
 let randomWords = "He found his art never progressed when he literally used his sweat and tears.".toLowerCase();
 generateWords();
 
 document.addEventListener("keydown", pressedKey);
 
 function pressedKey(event){
-    if(currentIndex >= targetTextSymbols.length - 1 && running){
-        gameOver();
+   if (gameEnded) {
+        window.alert("Reset the game first!");
+        return;
     }
-    if(isValidInput(event.key))
-    {
-        if(!timeStarted){
+
+    if (isValidInput(event.key)) {
+        if (!timeStarted) {
             timeStarted = true;
             intervalId = setInterval(() => {
                 milliseconds++;
             }, 10);
         }
-        console.log(event.key); 
-        highlightKey(event.key);   
-        currentIndex++; 
+
+        highlightKey(event.key);
+        currentIndex++;
+
+        if (currentIndex >= targetTextSymbols.length) {
+            endGame();
+        }
     }
 }
 
-function gameOver(){
+function endGame() {
+    gameEnded = true;
+    clearInterval(intervalId);
+    showStatistics();
+}
+
+function showStatistics(){
     clearInterval(intervalId);
     let wordCount = randomWords.split(" ").length;
     let wpm = (60 / (milliseconds / 100)) * wordCount;
-    document.getElementById("seconds").textContent = milliseconds / 100;
-    document.getElementById("wpm").textContent = wpm.toFixed(1);
-
+    wpm = calculateWpm();
+    document.getElementById("seconds").textContent = (milliseconds / 100) + " seconds";
+    document.getElementById("wpm").textContent = wpm.toFixed(1) + " wpm";
+    console.log(milliseconds);
+    console.log(wpm);
     milliseconds = 0;
-    timeStarted = false;
+}
+
+function calculateWpm(){
+
 }
 
 function highlightKey(key) {
@@ -48,7 +65,6 @@ function highlightKey(key) {
         currentIndex--;
     }
     else{
-        
         const correctSymbol = document.getElementById(currentIndex);
         const userSymbol = key;
         if(correctSymbol.textContent !== userSymbol) {
@@ -57,6 +73,7 @@ function highlightKey(key) {
         else{
             correctSymbol.className = "correctText";
         }
+
     }
 }
 
@@ -86,5 +103,6 @@ function reset() {
     targetTextSymbols = [];
     typingSpace.innerHTML = "";
     currentIndex = 0;
+    corectWords = 0;
     generateWords();
 }
