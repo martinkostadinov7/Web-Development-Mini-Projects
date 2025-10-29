@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Movies Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 class="page-title">Find any movie!</h1>
+    <input type="text" id="input" placeholder="Enter movie title">
+    <button onclick="fetchMovie()">Find!</button>
+    <h2 id="errorMessage"></h2>
+    <div class="movie-box" id="movie-box">
+        <div class="image-box">
+            <img src="https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg" alt="movie-poster" id="movie-poster">
+        </div>
+        <div class="details-box">
+            <p id="title">Inception</p>
+            <p id="year">(2010)</p>
+            <p id="runtime">148 min</p>
+            <p id="genres">Action, Adventure, Sci-Fi</p>
+            <p id="rating-heading">Rating:</p>
+            <p id="rating">8.8</p>
+            <p id="description">A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.</p>
+            <p id="director-heading">Director</p>
+            <p id="director">Christopher Nolan</p>
+            <p id="actors">Actors</p>
+            <p id="actors-list">Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page</p>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

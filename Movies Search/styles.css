@@ -1,0 +1,85 @@
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: white;
+}
+
+button{
+    margin-top: 10px;
+    font-size: 1.3em;
+    height: 40px;
+    width: 80px;
+    border-radius: 10px;
+}
+
+#errorMessage{
+    color: red;
+}
+
+input{
+    height: 25px;
+    border-radius: 5px;
+}
+
+button:hover{
+    background-color: rgb(208, 208, 208);
+}
+button:active{
+    background-color: rgb(174, 174, 174);
+}
+
+.movie-box{
+    border: 2px solid rgb(94, 94, 94);
+    display: none;
+    margin: 20px;
+}
+
+.image-box, .details-box{
+    padding: 20px;
+}
+
+#title, #year{
+    font-size: 2em;
+    display: inline;
+    color: rgb(255, 255, 255);
+}
+
+#year{
+    color: rgb(175, 175, 175);
+}
+
+#runtime{
+    margin-top: 3px;
+    color: rgb(211, 211, 211);
+}
+
+#rating, #rating-heading{
+    display: inline;
+}
+#rating{
+    color: rgb(144, 238, 144);
+}
+
+#description{
+    margin: 30px 0px;
+}
+
+#director, #director-heading{
+    margin: 5px 0px;
+}
+#director-heading{
+    font-size: 0.9em;
+    color: lightgray;
+}
+
+#actors-list, #actors{
+    margin: 5px 0px;
+}
+#actors{
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: lightgray;
+}
