@@ -1,0 +1,14 @@
+.movie-box{
+    display: inline-block;
+    border: 2px solid black;
+    margin: 10px;
+    max-width: 170px;
+}
+
+.movie-box .image{
+    margin: 10px;
+}
+
+.movie-box p {
+    margin: 15px;
+}
